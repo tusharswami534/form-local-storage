@@ -42,7 +42,7 @@ const Form = () => {
             <form onSubmit={handleSubmits} className='flex flex-col max-w-[400px] gap-2 border border-solid border-black p-4 rounded-lg'>
                 <input required value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} type="text" placeholder='First Name ' className='py-2 px-3 outline-none border border-solid border-black shadow-lg rounded-lg' />
                 <input required value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} type="text" placeholder='Last Name ' className='py-2 px-3 outline-none border border-solid border-black shadow-lg rounded-lg' />
-                <input required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} type="text" placeholder='Email ' className='py-2 px-3 outline-none border border-solid border-black shadow-lg rounded-lg' />
+                <input required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} type="email" placeholder='Email ' className='py-2 px-3 outline-none border border-solid border-black shadow-lg rounded-lg' />
                 <input required value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })} type="text" placeholder='Address ' className='py-2 px-3 outline-none border border-solid border-black shadow-lg rounded-lg' />
                 <button type='submit' className='py-2 px-3 shadow-lg rounded-lg bg-blue-600 text-white font-bold'>Submit</button>
             </form>
