@@ -25,11 +25,12 @@ const Form = () => {
         setFormData({ firstName: '', lastName: '', email: '', address: '' });
     }
 
-    const deleteData = (index) => {
-        const updatedData = output.filter((_, i) => i !== index);
-        setOutput(updatedData);
-        localStorage.setItem('data', JSON.stringify(updatedData));
-    };
+    // This oen by one items delete
+    // const deleteData = (index) => {
+    //     const updatedData = output.filter((_, i) => i !== index);
+    //     setOutput(updatedData);
+    //     localStorage.setItem('data', JSON.stringify(updatedData));
+    // };
 
     const deleteAllData = () => {
         localStorage.removeItem('data');
@@ -48,7 +49,7 @@ const Form = () => {
             <div className='mt-10 flex  gap-5 justify-center  gap-y-5 w-full flex-wrap'>
                 {output.map((item, index) => (
                     <div className='relative  max-w-[400px]' key={index}>
-                        <button onClick={() => deleteData(index)} className='absolute top-0 right-0 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center'>❌</button>
+                        {/* <button onClick={() => deleteData(index)} className='absolute top-0 right-0 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center'>❌</button> */}
                         <table className='space-2 border border-solid rounded-xl max-w-[400px] w-full border-black flex p-5'>
                             <tbody className='flex flex-col gap-y-2'>
                                 <tr>
